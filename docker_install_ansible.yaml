@@ -1,0 +1,12 @@
+---
+- name: install-jenkins
+  hosts: linux
+  become: yes
+  tasks:
+  - name: apt-update
+    apt:
+      update_cache: yes
+
+  - name: install docker
+    command:
+      cmd: sudo apt install docker.io -y
