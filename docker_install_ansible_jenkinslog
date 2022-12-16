@@ -1,0 +1,17 @@
+Started by user RIthvik
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/display_running_containers
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (display runnig conatainers)
+[Pipeline] sh
++ docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                               NAMES
+5b4259ea6060   nginx     "/docker-entrypoint.…"   36 seconds ago   Up 33 seconds   0.0.0.0:80->80/tcp, :::80->80/tcp   docker_compose_web_1
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
