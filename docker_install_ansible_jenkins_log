@@ -1,17 +1,32 @@
 Started by user RIthvik
-[Pipeline] Start of Pipeline
-[Pipeline] node
-Running on Jenkins in /var/lib/jenkins/workspace/display_running_containers
-[Pipeline] {
-[Pipeline] stage
-[Pipeline] { (display runnig conatainers)
-[Pipeline] sh
-+ docker ps -a
-CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                               NAMES
-5b4259ea6060   nginx     "/docker-entrypoint.…"   36 seconds ago   Up 33 seconds   0.0.0.0:80->80/tcp, :::80->80/tcp   docker_compose_web_1
-[Pipeline] }
-[Pipeline] // stage
-[Pipeline] }
-[Pipeline] // node
-[Pipeline] End of Pipeline
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/install_jenkins_ansible
+SSH: Connecting from host [ip-172-31-93-31]
+SSH: Connecting with configuration [ansibleUser] ...
+SSH: Creating session: username [ansible], hostname [54.90.182.200], port [22]
+SSH: Connecting session ...
+SSH: Connected
+SSH: Opening exec channel ...
+SSH: EXEC: channel open
+SSH: EXEC: STDOUT/STDERR from command [cd /etc/ansible/;
+ansible-playbook docker_install.yaml;] ...
+SSH: EXEC: connected
+
+PLAY [install-jenkins] *********************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [node1]
+
+TASK [apt-update] **************************************************************
+changed: [node1]
+
+TASK [install docker] **********************************************************
+changed: [node1]
+
+PLAY RECAP *********************************************************************
+node1                      : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+SSH: EXEC: completed after 32,023 ms
+SSH: Disconnecting configuration [ansibleUser] ...
+SSH: Transferred 0 file(s)
 Finished: SUCCESS
